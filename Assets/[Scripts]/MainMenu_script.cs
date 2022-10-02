@@ -16,4 +16,13 @@ public class MainMenu_script : MonoBehaviour
     {
         Application.Quit();
     }
+    public void Surrender()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void RestartB()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+    }
 }

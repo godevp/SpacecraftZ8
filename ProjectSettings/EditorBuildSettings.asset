@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: Assets/[Scenes]/MainMenu.unity
     guid: b0c40815e259a724d9e12c7e734586ce
   - enabled: 1
-    path: Assets/[Scenes]/FirstLevel.unity
+    path: Assets/[Scenes]/PlayLevel.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/[Scenes]/LoseLevel.unity
+    guid: 025a3fc0fce50664cb85b8e4f86960c4
   m_configObjects: {}
