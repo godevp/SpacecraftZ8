@@ -61,7 +61,7 @@ public class BulletBehaviour : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject == this.gameObject) return;
-        if(collision.gameObject.tag == "Enemy")
+        if(bulletType == BulletType.PLAYER && collision.gameObject.tag == "Enemy")
         {
            Destroy(collision.gameObject);
            Destroy(gameObject);
