@@ -129,13 +129,14 @@ public class PlayerBehaviour : MonoBehaviour
             ScoreManager.instance._score += 100;
             Destroy(collision.gameObject);
             _audioSource.pitch = 0.8f;
+            _audioSource.Play();
         }
         if (collision.gameObject.tag == "obstacle")
         {
             health -= 30.0f;
             Destroy(collision.gameObject);
             _audioSource.pitch = 3;
-            _audioSource.Play();
+            
         }
     }
 
