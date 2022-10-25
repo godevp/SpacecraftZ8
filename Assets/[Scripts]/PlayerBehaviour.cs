@@ -131,6 +131,6 @@ public class PlayerBehaviour : MonoBehaviour
 
     void GameOver()
     {
-        Debug.Log("GameOver");
+        MainMenu_script.instance.Surrender();
     }
 }

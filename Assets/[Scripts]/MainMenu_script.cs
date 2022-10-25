@@ -17,7 +17,12 @@ using UnityEngine.SceneManagement;
 public class MainMenu_script : MonoBehaviour
 {
     // Start is called before the first frame update
-  
+    public static MainMenu_script instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     public void StartGame()
     {
