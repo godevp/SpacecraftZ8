@@ -1774,14 +1774,14 @@ MonoBehaviour:
 
 
     - Destroy obstacles and
-    gain special powers by doing it.
+    gain more scores. Avoid them as well!
 
 
-    - Collect coins to increase your score.
+    - Collect coins to increase your
+    score.
 
 
-    -
-    Use joystick to move and Fire button to shoot'
+    - Use joystick to move and Fire button to shoot'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
