@@ -8,9 +8,10 @@ using UnityEngine.SceneManagement;
   MainMenu_scripts.cs 
   Vitaliy Karabanov
   Student number: 101312885
-  Last changed on Oct 2, 2022
+  Date last Modified - 24/10/2022 
   This is the mainMenu and just a button scripts
   Revision hystory: added function StartGame and QuitGame, later Surrender and restartB
+  *New made a singalton to use it in playerBehavior when dying.
  */
 
 

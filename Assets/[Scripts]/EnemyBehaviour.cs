@@ -3,7 +3,15 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEditor.PackageManager;
 using UnityEngine;
+/*
+ 
+ Source file Name - BackgroundStarsBehaviour.cs
+ Name - Vitaliy Karabanov
+ ID - 101312885
+ Date last Modified - 23/10/2022 
+ Program description: Move the background in certain direction and reset it when it gets to the bounds.
 
+ */
 public class EnemyBehaviour : MonoBehaviour
 {
     //private

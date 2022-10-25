@@ -7,7 +7,15 @@ public enum BulletType
     ENEMY,
     PLAYER
 }
+/*
+ 
+ Source file Name - BulletCreation.cs
+ Name - Vitaliy Karabanov
+ ID - 101312885
+ Date last Modified - 24/10/2022 
+ Program description: basically it has function where we instantiate it and set it properties for both enemy and player.
 
+ */
 public class BulletCreation : MonoBehaviour
 {
 

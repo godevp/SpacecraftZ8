@@ -1,7 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+/*
+ 
+ Source file Name - EnemyParent.cs
+ Name - Vitaliy Karabanov
+ ID - 101312885
+ Date last Modified - 24/10/2022 
+ Program description: Basically it's manager for enemies, obstacles and coins.
 
+ */
 public class EnemyParent : MonoBehaviour
 {
     [Range(1, 6)]

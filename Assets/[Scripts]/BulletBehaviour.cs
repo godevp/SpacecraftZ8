@@ -4,7 +4,15 @@ using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using static UnityEngine.UIElements.UxmlAttributeDescription;
+/*
+ 
+ Source file Name - BulletBehaviour.cs
+ Name - Vitaliy Karabanov
+ ID - 101312885
+ Date last Modified - 24/10/2022 
+ Program description: Bullets behaviour.
 
+ */
 public class BulletBehaviour : MonoBehaviour
 {
     [SerializeField] private Boundary verticalBounds;

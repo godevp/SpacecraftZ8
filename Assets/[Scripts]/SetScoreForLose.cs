@@ -3,7 +3,15 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+/*
+ 
+ Source file Name - SetScoreForLose.cs
+ Name - Vitaliy Karabanov
+ ID - 101312885
+ Date last Modified - 24/10/2022 
+ Program description: Set proper time and score (UI) in scene.
 
+ */
 public class SetScoreForLose : MonoBehaviour
 {
     [SerializeField] TMP_Text scoreText;

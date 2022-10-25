@@ -3,7 +3,15 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+/*
+ 
+ Source file Name - PlayerBehaviour.cs
+ Name - Vitaliy Karabanov
+ ID - 101312885
+ Date last Modified - 24/10/2022 
+ Program description: Basic Player Behaviour + a little UI(Score, health, time) work.
 
+ */
 public class PlayerBehaviour : MonoBehaviour
 {
     [SerializeField] private Boundary verticalBounds;

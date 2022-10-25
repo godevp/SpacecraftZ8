@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 /*
  
- Source file Name - BackgroundStarsBehaviour.cs
+ Source file Name - BGMovement.cs
  Name - Vitaliy Karabanov
  ID - 101312885
  Date last Modified - 23/10/2022 
