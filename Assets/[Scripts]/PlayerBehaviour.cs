@@ -28,6 +28,9 @@ public class PlayerBehaviour : MonoBehaviour
     private Animator animator;
     private float _timer;
 
+
+    private AudioSource _audioSource;
+
     private BulletParent bulletParent;
 
     private void Start()
@@ -35,6 +38,7 @@ public class PlayerBehaviour : MonoBehaviour
         bulletParent = FindObjectOfType<BulletParent>();
         animator = GetComponent<Animator>();
         maxHealth = health;
+        _audioSource = GetComponent<AudioSource>();
     }
     void Update()
     {
@@ -117,16 +121,21 @@ public class PlayerBehaviour : MonoBehaviour
         {
             Destroy(collision.gameObject);
             health -= 5.0f;
+            _audioSource.pitch = 3;
+            _audioSource.Play();
         }
         if(collision.gameObject.tag == "coin")
         {
             ScoreManager.instance._score += 100;
             Destroy(collision.gameObject);
+            _audioSource.pitch = 0.8f;
         }
         if (collision.gameObject.tag == "obstacle")
         {
             health -= 30.0f;
             Destroy(collision.gameObject);
+            _audioSource.pitch = 3;
+            _audioSource.Play();
         }
     }
 

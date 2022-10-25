@@ -21,10 +21,14 @@ public class BulletBehaviour : MonoBehaviour
 
     private BulletParent bulletParent;
     public BulletType bulletType;
+    public AudioSource audioSource;
+ 
     void Start()
     {
         player = FindObjectOfType<PlayerBehaviour>().gameObject;
         bulletParent = FindObjectOfType<BulletParent>();
+        audioSource =  GetComponent<AudioSource>();
+        audioSource.Play();
     }
 
     void Update()
@@ -71,5 +75,6 @@ public class BulletBehaviour : MonoBehaviour
             //add 1 bullet of aoe bomb to player here
         }
     }
+
 
 }
