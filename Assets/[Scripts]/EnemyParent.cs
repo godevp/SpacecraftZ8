@@ -7,13 +7,18 @@ public class EnemyParent : MonoBehaviour
     [Range(1, 6)]
     [SerializeField] private int enemyNumber = 4;
     [SerializeField] private GameObject enemyPrefab;
+    [SerializeField] private GameObject coinPrefab;
+    [SerializeField] private GameObject obstaclePrefab;
     public List<GameObject> enemies;
+
 
 
     void Start()
     {
         enemies = new List<GameObject>();
         StartCoroutine(CreateEnemies());
+        StartCoroutine(CreateCoins());
+        StartCoroutine(CreateObstacles());
     }
 
     private IEnumerator CreateEnemies()
@@ -34,6 +39,27 @@ public class EnemyParent : MonoBehaviour
             yield return new WaitForSeconds(0.7f);
         }
        
+    }
+
+    private IEnumerator CreateCoins()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(5f);
+
+            Instantiate(coinPrefab);
+
+        }
+    }
+    private IEnumerator CreateObstacles()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(2f);
+
+            Instantiate(obstaclePrefab);
+
+        }
     }
 
     public void DeleteEnemy(GameObject enemy)

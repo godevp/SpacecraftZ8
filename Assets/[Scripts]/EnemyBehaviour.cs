@@ -10,7 +10,7 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField] private Boundary verticalBounds;
     [SerializeField] private Boundary horizontalBounds;
     [SerializeField] private Boundary horizontalSpawnBounds;
-    [SerializeField] private float _speed;
+    [SerializeField] public float _speed;
     [SerializeField] private float _range;
     [SerializeField] private float _shootingRange;
     [SerializeField] private float _fireRate;

@@ -53,7 +53,15 @@ public class BulletBehaviour : MonoBehaviour
         if(collision.gameObject.tag == "Enemy")
         {
            Destroy(collision.gameObject);
+           Destroy(gameObject);
+           ScoreManager.instance._score += 5;
+        }
+        if (bulletType == BulletType.PLAYER && collision.gameObject.tag == "obstacle")
+        {
+            Destroy(collision.gameObject);
             Destroy(gameObject);
+            ScoreManager.instance._score += 25;
+            //add 1 bullet of aoe bomb to player here
         }
     }
 

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -13,10 +14,9 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] private float fireRate;
     [SerializeField] public float health;
     private float maxHealth;
-    [SerializeField] private GameObject[] healthObjects; 
-
-    
-
+    [SerializeField] private GameObject[] healthObjects;
+    [SerializeField] private TMP_Text ScoreText;
+    [SerializeField] private TMP_Text TimeText;
     private Animator animator;
     private float _timer;
 
@@ -42,6 +42,7 @@ public class PlayerBehaviour : MonoBehaviour
                 _timer = 0;
         }
         CheckHealth();
+        ShowProperScore();
     }
 
     public void Movement()
@@ -60,29 +61,27 @@ public class PlayerBehaviour : MonoBehaviour
     }
     void CheckHealth()
     {
-        switch((health * 100) / maxHealth)
+        var hpPercantage = (health * 100) / maxHealth;
+       if(hpPercantage < 75)
         {
-            case 75:
-                healthObjects[3].SetActive(false);
-                break;
-            case 50:
-                healthObjects[2].SetActive(false);
-                break;
-            case 25:
-                healthObjects[1].SetActive(false);
-                break;
-            case 0:
-                healthObjects[0].SetActive(false);
-                break;
-
-            default:
-                break;
+            healthObjects[3].SetActive(false);
         }
-
-
+       if(hpPercantage < 50)
+        {
+            healthObjects[2].SetActive(false);
+        }
+        if (hpPercantage < 25)
+        {
+            healthObjects[1].SetActive(false);
+        }
+        if (hpPercantage <= 0)
+        {
+            healthObjects[0].SetActive(false);
+        }
 
         if (health <= 0)
         {
+            health = 0;
             GameOver();
         }
     }
@@ -102,9 +101,6 @@ public class PlayerBehaviour : MonoBehaviour
         _timer = fireRate;
     }
 
-
-
-
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject == gameObject) return;
@@ -114,6 +110,23 @@ public class PlayerBehaviour : MonoBehaviour
             Destroy(collision.gameObject);
             health -= 5.0f;
         }
+        if(collision.gameObject.tag == "coin")
+        {
+            ScoreManager.instance._score += 100;
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.tag == "obstacle")
+        {
+            health -= 30.0f;
+            Destroy(collision.gameObject);
+        }
+    }
+
+
+    void ShowProperScore()
+    {
+        ScoreText.text = "Score: " + ScoreManager.instance._score;
+        TimeText.text = "Time: " + ScoreManager.instance._minutes + ":" + ScoreManager.instance._seconds.ConvertTo<int>();
     }
 
     void GameOver()
